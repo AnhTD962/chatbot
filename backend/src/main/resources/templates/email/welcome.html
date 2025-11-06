@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #0066cc, #0052a3); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+        .content { background: #f9f9f9; padding: 30px; }
+        .button { display: inline-block; padding: 12px 30px; background: #0066cc; color: white; text-decoration: none; border-radius: 5px; margin: 20px 0; }
+        .footer { text-align: center; padding: 20px; color: #666; font-size: 12px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🎉 Chào mừng đến với Hòa Phát Chatbot</h1>
+    </div>
+    <div class="content">
+        <p>Xin chào <strong th:text="${userName}">User</strong>,</p>
+
+        <p>Cảm ơn bạn đã đăng ký tài khoản tại <strong>Hòa Phát Chatbot</strong>!</p>
+
+        <p>Tài khoản của bạn đã được tạo thành công với email: <strong th:text="${email}">email@example.com</strong></p>
+
+        <h3>🚀 Bắt đầu sử dụng ngay:</h3>
+        <ul>
+            <li>✅ Hỏi đáp về thông tin Tập đoàn Hòa Phát</li>
+            <li>✅ Không giới hạn câu hỏi (tài khoản Free)</li>
+            <li>✅ Lưu lịch sử hội thoại</li>
+        </ul>
+
+        <h3>💎 Nâng cấp Premium để:</h3>
+        <ul>
+            <li>📊 Xem thông tin tài chính chi tiết</li>
+            <li>📈 Phân tích và báo cáo chuyên sâu</li>
+            <li>📚 Truy cập tài liệu nội bộ</li>
+            <li>⭐ Hỗ trợ ưu tiên</li>
+        </ul>
+
+        <a th:href="${loginUrl}" class="button">Đăng nhập ngay</a>
+
+        <p>Nếu có bất kỳ câu hỏi nào, đừng ngần ngại liên hệ với chúng tôi!</p>
+    </div>
+    <div class="footer">
+        <p>© 2024 Tập đoàn Hòa Phát. All rights reserved.</p>
+        <p>Email này được gửi tự động, vui lòng không reply.</p>
+    </div>
+</div>
+</body>
+</html>

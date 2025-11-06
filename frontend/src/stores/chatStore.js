@@ -1,0 +1,12 @@
+import { defineStore } from 'pinia'
+
+export const useChatStore = defineStore('chat', {
+    state: () => ({
+        messages: [],
+    }),
+    actions: {
+        reset() {
+            this.messages = []
+        }
+    }
+})
